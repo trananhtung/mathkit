@@ -3,10 +3,10 @@
 > Tiny, type-safe **scalar math** utilities — `clamp`, `lerp`, `remap`, `smoothstep`, precise `round`, `wrap`, `gcd`/`lcm`, and more. **Zero dependencies**.
 
 [![CI](https://github.com/trananhtung/mathkit/actions/workflows/ci.yml/badge.svg)](https://github.com/trananhtung/mathkit/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/mathkit.svg)](https://www.npmjs.com/package/mathkit)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/mathkit)](https://bundlephobia.com/package/mathkit)
-[![types](https://img.shields.io/npm/types/mathkit.svg)](https://www.npmjs.com/package/mathkit)
-[![license](https://img.shields.io/npm/l/mathkit.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@billdaddy/mathkit.svg)](https://www.npmjs.com/package/@billdaddy/mathkit)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@billdaddy/mathkit)](https://bundlephobia.com/package/@billdaddy/mathkit)
+[![types](https://img.shields.io/npm/types/@billdaddy/mathkit.svg)](https://www.npmjs.com/package/@billdaddy/mathkit)
+[![license](https://img.shields.io/npm/l/@billdaddy/mathkit.svg)](./LICENSE)
 
 `Math` gives you `min`, `max`, and `round` — but every UI, chart, game, and
 animation also needs `clamp`, `lerp`, a `remap` between ranges, and a `round`
@@ -14,7 +14,7 @@ that doesn't trip on `1.005`. `mathkit` is that missing scalar toolbox, fully
 typed and **tree-shakeable**.
 
 ```ts
-import { clamp, lerp, remap } from "mathkit";
+import { clamp, lerp, remap } from "@billdaddy/mathkit";
 
 clamp(volume, 0, 1);                 // keep in range
 lerp(start, end, t);                 // animate
@@ -37,14 +37,14 @@ remap(scrollY, 0, 800, 1, 0.4);      // map scroll → opacity
 ## Install
 
 ```bash
-npm install mathkit
-# or: pnpm add mathkit  /  yarn add mathkit  /  bun add mathkit
+npm install @billdaddy/mathkit
+# or: pnpm add @billdaddy/mathkit  /  yarn add @billdaddy/mathkit  /  bun add @billdaddy/mathkit
 ```
 
 ## Interpolation
 
 ```ts
-import { clamp, clamp01, lerp, inverseLerp, remap, smoothstep } from "mathkit";
+import { clamp, clamp01, lerp, inverseLerp, remap, smoothstep } from "@billdaddy/mathkit";
 
 clamp(15, 0, 10);          // 10   (swapped bounds are tolerated)
 clamp01(1.5);              // 1
@@ -57,7 +57,7 @@ smoothstep(0, 1, 0.25);    // 0.15625 (eased, clamped)
 ## Rounding & comparison
 
 ```ts
-import { round, roundTo, isClose } from "mathkit";
+import { round, roundTo, isClose } from "@billdaddy/mathkit";
 
 round(1.005, 2);     // 1.01
 round(1234.5678, -2); // 1200
@@ -69,7 +69,7 @@ isClose(1, 1.05, 0.1);   // true (custom tolerance)
 ## Angles, wrapping, number theory
 
 ```ts
-import { degToRad, radToDeg, wrap, gcd, lcm } from "mathkit";
+import { degToRad, radToDeg, wrap, gcd, lcm } from "@billdaddy/mathkit";
 
 degToRad(180);        // 3.14159…
 wrap(370, 0, 360);    // 10
