@@ -1,6 +1,6 @@
 {
   "name": "@billdaddy/mathkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny, type-safe scalar math utilities — clamp, lerp, remap, smoothstep, precise round, wrap, gcd/lcm, and more. Zero dependencies.",
   "keywords": [
     "math",
